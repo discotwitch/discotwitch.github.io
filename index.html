@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179530494-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-179530494-1');
+    </script>
+
+
+    <title>DiscoTwitch - Home</title>
+    <meta name="description" content="Keep you Discord server up-to-date on Twitch channels going live. !dt follow xqcow,esl_csgo">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.47">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Pontano+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Trispace&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.PNG">
+</head>
+
+<body id="content">
+    <script>
+    window.onload = function(){
+    document.getElementById('close').onclick = function(){
+        this.parentNode.parentNode.removeChild(this.parentNode);
+        return false;
+    };
+};</script>
+    <div class="navbar">
+        <a href="index.html" style="float:left;margin-left:100px;background: #777777;">Discotwitch</a>
+        <a href="doc.html" style="float:left">Documentation</a>
+        <a href="#support" style="margin-right:100px">Support</a>
+        <a href="#quickstart">Quick Start</a>
+        <a href="#">Home</a>
+
+    </div>
+<!--
+    <div class="announcebanner">
+        <button id='close'>X</button>
+        <p>DiscoTwitch is currently under maintenance.<br>You can still invite it to your server, but it won't send messages or process commands.<br>Expect it to be back in a few weeks!</p>
+    </div>
+-->
+    <div id="splash" style="padding-bottom:100px">
+
+        <h2 style="float:center;padding-bottom:100px">DiscoTwitch</h2>
+       <!-- <p style="padding-top:300px;font-size:0.5em;">Customizable Discord/Twitch Bot</p>-->
+    </div>
+
+    <div style="padding-bottom: 100px;">
+
+    <div style="padding-bottom: 100px">
+
+        <!--
+        <h2 class="title">Smart Custimization</h2>
+        <p class="infotext">DiscoTwitch works with you to seamlessly keep your server updated.  <br><br>    -&emsp;&emsp;
+                                                                                                <br><br>    -&emsp;&emsp;Reassigns itself out of deleted channels</p>
+        -->
+
+        <p style="padding-top:100px" class="infotext">
+            Fast & easily customizable Twitch-live notification bot.<br><br><br>
+            Discotwitch can be easily configured to monitor multiple Twitch channels and notify your server whenever one goes live.<br><br>
+            Simply invite it to your server, and it will guide you through the setup process.<br><br>
+            <a target="_blank" href="https://discord.com/api/oauth2/authorize?client_id=759451174998376468&permissions=67266560&scope=bot"><button>Invite</button></a>
+      <!--      Choose a channel for DiscoTwitch to post on-live notifications in:
+           <img alt="!dt channel #twitch-live" src="channel.jpg" style="width:900px;padding-top:20px;"> -->
+            <br><br></p>
+        <div id="quickstart">
+        <h2 class="title" >Quick Start</h2>
+        <p class="infotext">Choose a channel for DiscoTwitch to post on-live notifications in:
+            <img alt="!dt channel #twitch-live" src="channel.jpg" style="width:900px;margin-top:20px;"><br><br></p>
+            <p class="infotext"> Follow Twitch streams to get notified when they go live:
+            <img alt="!dt follow xqcow esl_csgo" src="follow.jpg" style="width:900px;margin-top:20px;">
+            <img alt="Successfully followed twitch.tv/xqcow\nSuccessfully followed twitch.tv/esl_csgo" src="followre.jpg" style="width:900px;margin-bottom:40px">
+            <br>Set custom on-live notification messages:<br>
+            <img alt="!dt message <user> is live: <link> &everyone" src="message.jpg" style="width:900px;margin-top:20px">
+
+            <img alt="xcqow is live: https://twitch.tv/xqcow @everyone" src="live.jpg" style="width:900px;">
+        </p>
+        <!--
+        <p class="infotext">Follow any number of streams to get notified when they go live.<br><br>&emsp;&emsp;!dt follow xqcow ESL_CSGO Myth</p>
+        <p class="infotext">Choose which channel DiscoTwitch will notify when your followed streams go live, default is 'general'.<br><br>&emsp;&emsp;!dt channel general</p>
+        <p class="infotext">Customize the message DiscoTwitch sends when a streamer goes live.<br><br>&emsp;&emsp; !dt message &ltuser&gt has gone live! &ltlink&gt</p>
+        -->
+            </div>
+        <p class="infotext">Visit the <a class="infoa" href="doc.html">Documentation</a> for more info on commands and setup.</p>
+        <h2 id="support" class="title">Discord Server</h2>
+        <p class="infotext">Visit the official Discord for help and to report bugs.<br><br><a class="btn" target="_blank" href="https://discord.gg/atwCY9d"><button>Join</button></a></p><br>
+        <p class="infotext">Consider leaving a review on <a target='_blank' href="https://top.gg/bot/759451174998376468">Top.gg</a></p>
+
+        <!--
+        <h2 class="title">Donate</h2>
+        <p class="infotext">All donations are appreciated! I am a one-man team, and over the past few months this project has essentially become my part-time job.
+            Any support is appreciated in order to help me maintain and expand this project into the future.<br><br>
+            <a class="infoa" target="_blank" href="https://paypal.me/discotwitch"><button>Give a Donation</button></a><br><br>
+            If you contribute and have joined the Discord, be sure to include
+            your username and discriminator to get your supporter role!</p>
+        -->
+
+
+
+    </div>
+    </div>
+
+
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="/__/firebase/7.24.0/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="/__/firebase/7.24.0/firebase-analytics.js"></script>
+
+</body>
+<footer>
+    <p style="color:white">Copyright &copy; 2020 DiscoTwitch.com, All Rights Reserved, not affiliated or endorsed by Discord Inc or Twitch Interactive.</p>
+</footer>

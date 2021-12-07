@@ -1,0 +1,135 @@
+body {
+  font-family: "Pontano Sans", sans-serif;
+  background: #eeeeee;
+
+}
+/* The navigation bar */
+.navbar {
+  z-index: 1;
+  overflow: hidden;
+  background: #999999;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+.announcebanner {
+    z-index: 0;
+    position: fixed;
+    background: white;
+    padding-top: 45px;
+    padding-left: 280px;
+    padding-right: 945px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+img {
+    border-style: inset;
+    border-width: 3px;
+    border-color: grey;
+}
+/* Links inside the navbar */
+.navbar a {
+  float: right;
+  display: block;
+  color: #eeeeee;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+#logo {
+    width: 30px;
+    float: left;
+    margin-right: 10px;
+}
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #777777;
+  color: #ddd;
+}
+
+/* Main content */
+.main {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+#quickstart {
+    padding: 1px 0px 10px 0px;
+    background: #dddddd;
+    margin: 50px;
+    border-style: solid;
+}
+#splash {
+    font-family: 'Trispace', sans-serif;
+    font-size: 3em;
+    background: #5f6f7f;
+    text-align: center;
+    padding-top: 170px;
+    padding-bottom: 230px;
+    color: white;
+}
+#logo {
+    font-family: 'Trispace', sans-serif;
+    font-size: 3em;
+    background: #e8c156;
+    text-align: center;
+    padding-top: 170px;
+    padding-bottom: 230px;
+}
+button:hover {
+    background-color: #4f5f6f;
+}
+button {
+    font-size: 1em;
+    color: white;
+    background-color: #4e4e4e;
+    border: none;
+    margin-left: 40px;
+    padding: 10px 50px 10px 50px;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+#main-info{
+    padding-top: 100px;
+}
+#avatar{
+    border-radius: 50%;
+    width: 75px;
+    float: left;
+    margin-right: 50px;
+    margin-left: 270px;
+    margin-top: 100px;
+}
+.title {
+    margin-top: 100px;
+    padding-left: 280px;
+    padding-right:320px;
+    padding-bottom: 30px;
+    text-align: left;
+}
+.infotext {
+    padding-left: 8vw;
+    padding-right:23vw;
+    font-size: 1.25em;
+    text-align: left;
+}
+
+.infotext a {
+    color: #03b1fc;
+}
+
+footer {
+    background: #3e3e3e;
+    padding-top: 10px;
+    padding-bottom: 13px;
+    font-size: 13px;
+    text-align: center;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<head>
+      <!-- Global site tag (gtag.js) - Google Analytics  -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179530494-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-179530494-1');
+    </script>
+
+
+
+    <title>Discotwitch - Documentation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Pontano+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Trispace&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="docstyle.css">
+    <link rel="icon" href="logo.PNG">
+</head>
+
+<body id="content">
+    <div class="navbar">
+        <a href="index.html" style="float:left;margin-left:100px"><!--<img id="logo" src='logo.png'>-->Discotwitch</a>
+        <a href="doc.html" style="float:left;background: #777777;">Documentation</a>
+        <a href="#" style="margin-right:100px">Overview</a>
+        <a href="#commands">Commands</a>
+
+    </div>
+    <div id="">
+        <div class="splash">
+        <h2>Using DiscoTwitch</h2>
+        </div>
+    <div id="#" style="margin-left:10vw;margin-top:20px">
+        <p class="infotext title">Navigation</p>
+        <a class="infotext" style="margin-left:50px" href="#twitch">Twitch Commands</a><br><br>
+        <a class="infotext" style="margin-left:50px" href="#discord">Discord Commands</a><br><br>
+        <a class="infotext" style="margin-left:50px" href="#shorthand">Shorthand</a><br><br>
+        <a class="infotext" style="margin-left:50px" href="#help">More Help</a>
+    </div>
+        <p class="infotext" style="margin-top:100px">Most commands are optional. The only commands that you need for setup are <a href="#follow">!dt follow</a> and <a href="#channel">!dt channel</a>.</p>
+    <div id="commands" style="padding-bottom: 100px;">
+        <span id="follow"></span>
+        <h2 class="title2" id="twitch">Twitch Commands</h2>
+        <h2 class="title">!dt follow <i>user,user,user...</i></h2>
+        <p class="infotext">Choose Twitch users to get alerts for.<br>You can follow multiple users at once, separate them with commas (without spaces).</p>
+        <p class="infotext" style="padding-left:40px">Examples:</p>
+        <p class="infotext"><i>!dt follow xqcow</i><br>> follow xqc (start getting alerts for them)</p>
+        <p class="infotext"><i>!dt follow xqcow,esl_csgo</i><br>> follow xqc and esl_csgo</p>
+        <h2 class="title">!dt unfollow <i>user,user,user...</i></h2>
+        <p class="infotext">Unfollow users to stop getting alerts for them.<br>Use "unfollow all" to stop following everyone at once.</p>
+        <p class="infotext" style="padding-left:40px">Examples:</p>
+        <p class="infotext"><i>!dt stop getting alerts for xqcow,esl_csgo</i><br>> unfollow xqc and esl_sc2</p>
+        <h2 class="title">!dt status <i>user</i></h2>
+        <p class="infotext">Show the online status of a provided user.<br>You can also use a plain status command to list all your followed users' live statuses.</p>
+        <p class="infotext" style="padding-left:40px">Examples:</p>
+        <p class="infotext"><i>!dt status</i><br>> list which followed users are live</p>
+        <p class="infotext"><i>!dt status esl_sc2</i><br>> see if twitch.tv/esl_sc2 is live</p>
+        <h2 class="title">!dt clips <i>user</i></h2>
+        <p class="infotext">View the all-time top clip of a twitch user.</p>
+        <p class="infotext" style="padding-left:40px">Examples:</p>
+        <p class="infotext"><i>!dt clips xqcow</i><br>> see xqc's top clip</p>
+        <h2 class="title2" id="discord">Discord Commands</h2>
+        <h2 class="title">!dt message <i>"on-live message"</i></h2>
+            <p class="infotext">Change the on-live alert message.<br><br>
+                You can use the following modifiers:<br>
+                &ltuser&gt inserts Twitch username<br>
+                &ltlink&gt inserts Twitch link<br>
+                &lttitle&gt inserts stream title<br>
+                &ltgame&gt inserts the game they're playing<br>
+                &ltbr&gt inserts newline<br><br>
+            </p>
+        <p class="infotext" style="padding-left:40px">Note:</p>
+        <p class="infotext"><i>Using this command is optional, as the bot has a default message</i></p>
+        <p class="infotext" style="padding-left:40px">Examples:</p>
+            <p class="infotext"><i>!dt message "&ltuser&gt is live! &ltlink&gt &ltbr&gt Playing &ltgame&gt"</i><br><br> >
+                <span id="channel"></span>
+                sets alert message to:<br>
+            Joe is live! https://twitch.tv/joe <br> Playing Minecraft</p>
+
+        <h2 class="title">!dt channel <i>server-channel</i></h2>
+            <p class="infotext">Choose where the bot will post alerts.</p>
+        <p class="infotext" style="padding-left:40px">Examples:</p>
+        <p class="infotext"><i>!dt channel #on-live</i><br>> tell bot to post alerts in #on-live channel.</p>
+        <h2 class="title">!dt role <i>server-role</i></h2>
+        <p class="infotext">Set the required role to send commands to DiscoTwitch.</p>
+        <p class="infotext">Default role is @everyone, meaning anyone can follow/unfollow users, change the post channel,<br>
+            alert message, and nickname.</p>
+        <p class="infotext" style="padding-left:40px">Examples:</p>
+        <p class="infotext"><i>!dt role @Admin</i><br>> set role to @Admin</p>
+        <h2 class="title">!dt nickname <i>name</i></h2>
+        <p class="infotext">Change the nickname of the bot in your server.</p>
+        <p class="infotext" style="padding-left:40px">Examples:</p>
+        <p class="infotext"><i>!dt nickname Live-Bot</i><br>> set DiscoTwitch's nickname to "Live-Bot"</p>
+        <h2 class="title">!dt settings <i>options</i></h2>
+        <p class="infotext">Customize misc settings.<br><br>Options:<br></p>
+        <p class="infotext" style="padding-left:40px">0 - mute (enabling other options will override this)<br>1 - get on-live notifications (enabled by default)<br>2 - get title change alerts<br>3 - get offline alerts<br>4 - edit on-live alerts when channels go offline (enabled by default)<br>5 - get VOD links in offline alerts<br>6 - edit VOD links into on-live messages when channels go offline</p>
+        <p class="infotext" style="padding-left:40px">Examples:</p>
+        <p class="infotext"><i>!dt settings 13<br>!dt settings 31</i><br>> get only on-live & offline alerts (the order of the numbers doesn't matter)</p>
+        <h2 class="title2" id="shorthand">Command Shorthand</h2>
+        <p class="infotext">Some commands can be shortened for easier usability.</p>
+        <p class="infotext" style="padding-left:40px">!dt help > !dt h</p>
+        <p class="infotext" style="padding-left:40px">!dt follow > !dt f</p>
+        <p class="infotext" style="padding-left:40px">!dt unfollow > !dt u</p>
+        <p class="infotext" style="padding-left:40px">!dt channel > !dt ch</p>
+        <p class="infotext" style="padding-left:40px">!dt message > !dt msg</p>
+        <p class="infotext" style="padding-left:40px">!dt status > !dt s</p>
+        <p class="infotext" style="padding-left:40px">!dt setting > !dt set</p>
+        <p class="infotext" style="padding-left:40px">!dt nickname > !dt nick</p>
+        <h2 class="title2" id="help">More Help</h2>
+        <p class="infotext">This page briefly covers the usage of DiscoTwitch commands.</p>
+        <p class="infotext">If you need more help or have bugs/issues to report join the official Discord:</p>
+        <p class="infotext"><a href="https://discord.com/invite/atwCY9d"><button>Join</button></a></p>
+
+
+
+
+    </div>
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="/__/firebase/7.24.0/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="/__/firebase/7.24.0/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="/__/firebase/7.24.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.24.0/firebase-firestore.js"></script>
+</body>
+<footer>
+    <p style="color:white">Copyright &copy; 2020 DiscoTwitch.com, All Rights Reserved, not affiliated or endorsed by Discord Inc or Twitch Interactive.</p>
+</footer>
+
