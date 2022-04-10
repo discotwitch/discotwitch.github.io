@@ -88,14 +88,24 @@
         <p class="infotext">Set the required role to send commands to DiscoTwitch.<br>This command also uses no arguments, you'll choose a role from a menu.</p>
         <p class="infotext">Default role is @everyone, meaning anyone can follow/unfollow users, change the post channel, etc.</p>
         <h2 class="title">/settings</h2>
-        <p class="infotext">Customize misc settings from a dropdown menu.<br><br>Options - what each does when enabled:<br></p>
-        <p class="infotext" style="padding-left:40px">Mute all > Mutes all alerts, overriding all other options.<br>
-        On-live alerts > Sends messages when followed channels go live (enabled by default).<br>
-        Edit alerts when offline > Edits <i>(OFFLINE)</i> into on-live alerts when the channel goes offline (enabled by default).<br>
-        Include replay links in offline edits > Edits a stream replay into on-live alerts when channels go offline (if available).<br>
-        Alert when stream titles change > Sends an alert when a live stream changes its title.<br>
-        Alert when channels go offline > Sends alerts when live streams end.<br>
-        Alert with replays when streams end > Send alerts when live streams end with links to the stream replay.</p>
+        <p class="infotext">Customize misc settings from a dropdown menu.<br><br>Notification Settings:<br></p>
+        <p class="infotext" style="padding-left:40px">- Mute all -> Mutes all alerts, overriding all other options.<br>
+        - Twitch live alerts -> Sends messages when followed channels go live (enabled by default).<br>
+        - Edit alerts when offline -> Edits <i>(OFFLINE)</i> into on-live alerts when the channel goes offline (enabled by default).<br>
+        - Edit replay links into alerts -> Edits a stream replay into on-live alerts when channels go offline (if available).<br>
+        - Delete alerts when offline -> Deletes the last alert sent for a Twitch channel when they go offline.<br>
+        - Use Discord usernames in live alerts -> @mentions connected Discord users in their live alerts if they're connected to a Twitch channel through /settings > Twitch User Settings<br>
+        - Alert when stream titles change -> Sends an alert when a live stream changes its title.<br>
+        - Alert when channels go offline -> Sends alerts when live streams end.<br>
+        - Alert with replays when streams end -> Send alerts when live streams end with links to the stream replay.</p>
+        <p class="infotext">Role Settings:<br></p>
+        <p class="infotext" style="padding-left:40px">- Set required role for changing settings -> Only users with this chosen role will be able to edit DiscoTwitch settings such as /channel, /message, /settings, etc. This is the same as using the /role command.<br>
+        - Set default alert role for &ltrole&gt -> Choose what role will be mentioned by default in alert messages in place of "&ltrole&gt". This can be overridden for specific Twitch users in /settings > Twitch User Settings</p>
+        <p class="infotext">Twitch User Settings:<br></p>
+        <p class="infotext" style="padding-left:40px">- Connect a Discord user -> Choose a Discord user to mention in live alerts for the chosen Twitch user instead of the Twitch username. This will also give the Discord user a "Streaming" Role whenever the chosen Twitch user is live. If there's issues with getting the role assignment to work, make sure to give DiscoTwitch "Administrator" Privileges.<br>
+        - Disconnect a Discord user -> Removes any user chosen from the above option.<br>
+        - Choose a role to mention in alerts -> Overrides the default &ltrole&gt (chosen with /role > default alert role) for the chosen Twitch user.<br>
+        - Set a custom alert channel -> Overrides the alert channel (chosen with /channel) with a different one for the chosen Twitch user.</p>
         <h2 class="title">/nickname <i>name</i></h2>
         <p class="infotext">Change the nickname of the bot in your server.</p>
         <p class="infotext" style="padding-left:40px">Examples:</p>
