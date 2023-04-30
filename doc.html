@@ -104,6 +104,13 @@
         - Disconnect a Discord user -> Removes any user chosen from the above option.<br>
         - Choose a role to mention in alerts -> Overrides the default &ltrole&gt (chosen with /role > default alert role) for the chosen Twitch user.<br>
         - Set a custom alert channel -> Overrides the alert channel (chosen with /channel) with a different one for the chosen Twitch user.</p>
+        <h2 class="title">/connect <i>discorduserid, twitchname</i></h2>
+        <p class="infotext">Connect a Discord user to their Twitch account (same functionality as "Twitch User Settings")</p>
+        <p class="infotext" style="padding-left:40px">Examples:</p>
+        <p class="infotext"><i>/connect 01001293821093 xqc</i><br>> The discord user with id "01001293821093" will now be mentioned instead of "xqc" in live alerts for twitch.tv/xqc</p>
+        <br>
+        <p class="infotext">The "connect" command will also add a new "Streaming" role which will be given to Discord users when their Twitch account is detected as live. If this role isn't being assigned correctly, please make sure your server's role hierarchy is as follows (discotwitch must have a role higher than the created "Streaming" role)</p>
+        <img src="roels.png" style="width: 500px" class="infotext">
         <h2 class="title">/nickname <i>name</i></h2>
         <p class="infotext">Change the nickname of the bot in your server.</p>
         <p class="infotext" style="padding-left:40px">Examples:</p>
