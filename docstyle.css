@@ -59,11 +59,11 @@ html, body {
 }
 .splash {
     font-family: 'Trispace', sans-serif;
-    font-size: 3em;
+    font-size: 2em;
     background: #5f6f7f;
     text-align: center;
-    padding-top: 42px;
-    padding-bottom: 58px;
+    padding-top: 50px;
+    padding-bottom: 40px;
     color: white;
 }
 #main-info{
