@@ -13,7 +13,7 @@
 
 
 
-    <title>Discotwitch - Documentation</title>
+    <title>Disco Bot - Documentation</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Pontano+Sans&display=swap" rel="stylesheet">
@@ -26,15 +26,16 @@
 
 <body id="content">
     <div class="navbar">
-        <a href="index.html" style="float:left;margin-left:100px"><!--<img id="logo" src='logo.png'>-->Discotwitch</a>
+        <a href="index.html" style="float:left;margin-left:100px"><!--<img id="logo" src='logo.png'>-->Home</a>
         <a href="doc.html" style="float:left;background: #777777;">Documentation</a>
+        <a target="_blank" href="https://github.com/mike-fmh/twitch-livebot" style="float:left">GitHub</a>
         <a href="#" style="margin-right:100px">Overview</a>
         <a href="#commands">Commands</a>
 
     </div>
     <div id="">
         <div class="splash">
-        <h2>Using DiscoTwitch</h2>
+        <h3>Disco Bot Documentation</h3>
         </div>
     <div id="#" style="margin-left:10vw;margin-top:20px">
         <p class="infotext title">Navigation</p>
@@ -84,7 +85,7 @@
         <h2 class="title">/channel</h2>
             <p class="infotext">Choose where the bot will post alerts.<br>No arguments are used with this - instead you choose a channel from a menu after using the command.</p>
         <h2 class="title">/role</h2>
-        <p class="infotext">Set the required role to send commands to DiscoTwitch.<br>This command also uses no arguments, you'll choose a role from a menu.</p>
+        <p class="infotext">Set the required role to send commands to Disco.<br>This command also uses no arguments, you'll choose a role from a menu.</p>
         <p class="infotext">Default role is @everyone, meaning anyone can follow/unfollow users, change the post channel, etc.</p>
         <h2 class="title">/settings</h2>
         <p class="infotext">Customize misc settings from a dropdown menu.<br><br>Notification Settings:<br></p>
@@ -97,26 +98,26 @@
         - Alert when channels go offline -> Sends alerts when live streams end.<br>
         - Alert with replays when streams end -> Send alerts when live streams end with links to the stream replay.</p>
         <p class="infotext">Role Settings:<br></p>
-        <p class="infotext" style="padding-left:40px">- Set required role for changing settings -> Only users with this chosen role will be able to edit DiscoTwitch settings such as /channel, /message, /settings, etc. This is the same as using the /role command.<br>
+        <p class="infotext" style="padding-left:40px">- Set required role for changing settings -> Only users with this chosen role will be able to edit Disco settings such as /channel, /message, /settings, etc. This is the same as using the /role command.<br>
         - Set default alert role for &ltrole&gt -> Choose what role will be mentioned by default in alert messages in place of "&ltrole&gt". This can be overridden for specific Twitch users in /settings > Twitch User Settings</p>
         <p class="infotext">Twitch User Settings:<br></p>
-        <p class="infotext" style="padding-left:40px">- Connect a Discord user -> Choose a Discord user to mention in live alerts for the chosen Twitch user instead of the Twitch username. This will also give the Discord user a "Streaming" Role whenever the chosen Twitch user is live. If there's issues with getting the role assignment to work, make sure to give DiscoTwitch "Administrator" Privileges.<br>
+        <p class="infotext" style="padding-left:40px">- Connect a Discord user -> Choose a Discord user to mention in live alerts for the chosen Twitch user instead of the Twitch username. This will also give the Discord user a "Streaming" Role whenever the chosen Twitch user is live. If there's issues with getting the role assignment to work, make sure to give Disco "Administrator" Privileges.<br>
         - Disconnect a Discord user -> Removes any user chosen from the above option.<br>
         - Choose a role to mention in alerts -> Overrides the default &ltrole&gt (chosen with /role > default alert role) for the chosen Twitch user.<br>
         - Set a custom alert channel -> Overrides the alert channel (chosen with /channel) with a different one for the chosen Twitch user.</p>
         <h2 class="title">/connect <i>discorduserid, twitchname</i></h2>
         <p class="infotext">Connect a Discord user to their Twitch account (same functionality as "Twitch User Settings")</p>
         <p class="infotext" style="padding-left:40px">Examples:</p>
-        <p class="infotext"><i>/connect 01001293821093 xqc</i><br>> The discord user with id "01001293821093" will now be mentioned instead of "xqc" in live alerts for twitch.tv/xqc</p>
+        <p class="infotext"><i>/connect 01001293821093 xqc</i><br>> The discord user with id "01001293821093" will now be mentioned instead of "xqc" in live alerts for twitch.tv/xqc</p>/
         <br>
-        <p class="infotext">The "connect" command will also add a new "Streaming" role which will be given to Discord users when their Twitch account is detected as live. If this role isn't being assigned correctly, please make sure your server's role hierarchy is as follows (discotwitch must have a role higher than the created "Streaming" role)</p>
+        <p class="infotext">The "connect" command will also add a new "Streaming" role which will be given to Discord users when their Twitch account is detected as live. If this role isn't being assigned correctly, please make sure your server's role hierarchy is as follows (Disco must have a role higher than the created "Streaming" role)</p>
         <img src="roels.png" style="width: 500px" class="infotext">
         <h2 class="title">/nickname <i>name</i></h2>
         <p class="infotext">Change the nickname of the bot in your server.</p>
         <p class="infotext" style="padding-left:40px">Examples:</p>
-        <p class="infotext"><i>/nickname Live-Bot</i><br>> set DiscoTwitch's nickname to "Live-Bot"</p>
+        <p class="infotext"><i>/nickname Live-Bot</i><br>> set Disco's nickname to "Live-Bot"</p>
         <h2 class="title2" id="help">More Help</h2>
-        <p class="infotext">This page briefly covers the usage of DiscoTwitch commands.</p>
+        <p class="infotext">This page briefly covers the usage of Disco commands.</p>
         <p class="infotext">If you need more help or have bugs/issues to report join the official Discord:</p>
         <p class="infotext"><a href="https://discord.com/invite/atwCY9d"><button>Join</button></a></p>
 
@@ -137,6 +138,6 @@
   <script src="/__/firebase/7.24.0/firebase-firestore.js"></script>
 </body>
 <footer>
-    <p style="color:white">Copyright &copy; 2023 DiscoTwitch.com, All Rights Reserved, not affiliated or endorsed by Discord Inc or Twitch Interactive.</p>
+    <p style="color:white">Copyright &copy; 2023 Disco Twitch Alerts, All Rights Reserved, not affiliated or endorsed by Discord Inc or Twitch Interactive.</p>
 </footer>
 
