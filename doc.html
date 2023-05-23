@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 
 <head>
-      <!-- Global site tag (gtag.js) - Google Analytics  -->
+    <!-- Global site tag (gtag.js) - Google Analytics  -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179530494-1"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'UA-179530494-1');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-179530494-1');
     </script>
-
 
 
     <title>Disco Bot - Documentation</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.5">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Pontano+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Pontano+Sans&display=swap"
+          rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Trispace&display=swap" rel="stylesheet">
@@ -25,39 +29,43 @@
 </head>
 
 <body id="content">
-    <div class="navbar">
-        <a href="index.html" style="float:left;margin-left:100px"><!--<img id="logo" src='logo.png'>-->Home</a>
-        <a href="doc.html" style="float:left;background: #777777;">Documentation</a>
-        <a target="_blank" href="https://github.com/mike-fmh/twitch-livebot" style="float:left">GitHub</a>
-        <a href="#" style="margin-right:100px">Overview</a>
-        <a href="#commands">Commands</a>
+<div class="navbar">
+    <a href="index.html" style="float:left;margin-left:100px"><!--<img id="logo" src='logo.png'>-->Home</a>
+    <a href="doc.html" style="float:left;background: #777777;">Documentation</a>
+    <a target="_blank" href="https://github.com/mike-fmh/twitch-livebot" style="float:left">GitHub</a>
+    <a href="#" style="margin-right:100px">Overview</a>
+    <a href="#commands">Commands</a>
 
-    </div>
-    <div id="">
-        <div class="splash">
+</div>
+<div id="">
+    <div class="splash">
         <h3>Documentation</h3>
-        </div>
+    </div>
     <div id="#" style="margin-left:10vw;margin-top:20px">
         <p class="infotext title">Navigation</p>
         <a class="infotext" style="margin-left:50px" href="#twitch">Twitch Commands</a><br><br>
         <a class="infotext" style="margin-left:50px" href="#discord">Discord Commands</a><br><br>
         <a class="infotext" style="margin-left:50px" href="#help">More Help</a>
     </div>
-        <p class="infotext" style="margin-top:100px">Most commands are optional. The only commands that you need for setup are <a href="#follow">/follow</a> and <a href="#channel">/channel</a>.</p>
+    <p class="infotext" style="margin-top:100px">Most commands are optional. The only commands that you need for setup
+        are <a href="#follow">/follow</a> and <a href="#channel">/channel</a>.</p>
     <div id="commands" style="padding-bottom: 100px;">
         <span id="follow"></span>
         <h2 class="title2" id="twitch">Twitch Commands</h2>
         <h2 class="title">/follow <i>user,user,user...</i></h2>
-        <p class="infotext">Choose Twitch users to get alerts for.<br>You can follow multiple users at once, separate them with commas (without spaces).</p>
+        <p class="infotext">Choose Twitch users to get alerts for.<br>You can follow multiple users at once, separate
+            them with commas (without spaces).</p>
         <p class="infotext" style="padding-left:40px">Examples:</p>
         <p class="infotext"><i>/follow xqcow</i><br>> follow xqc (start getting alerts for them)</p>
         <p class="infotext"><i>/follow xqcow,esl_csgo</i><br>> follow xqc and esl_csgo</p>
         <h2 class="title">/unfollow <i>user,user,user...</i></h2>
-        <p class="infotext">Unfollow users to stop getting alerts for them.<br>Use "unfollow all" to stop following everyone at once.</p>
+        <p class="infotext">Unfollow users to stop getting alerts for them.<br>Use "unfollow all" to stop following
+            everyone at once.</p>
         <p class="infotext" style="padding-left:40px">Examples:</p>
         <p class="infotext"><i>/unfollow xqcow,esl_csgo</i><br>> unfollow xqc and esl_csgo</p>
         <h2 class="title">/status <i>user</i></h2>
-        <p class="infotext">Show the online status of a provided user.<br>You can also use a plain status command to list all your followed users' live statuses.</p>
+        <p class="infotext">Show the online status of a provided user.<br>You can also use a plain status command to
+            list all your followed users' live statuses.</p>
         <p class="infotext" style="padding-left:40px">Examples:</p>
         <p class="infotext"><i>/status</i><br>> list which followed users are live</p>
         <p class="infotext"><i>/status esl_sc2</i><br>> see if twitch.tv/esl_sc2 is live</p>
@@ -67,50 +75,71 @@
         <p class="infotext"><i>/clips xqcow</i><br>> see xqc's top clip</p>
         <h2 class="title2" id="discord">Discord Commands</h2>
         <h2 class="title">/message <i>"alert message"</i></h2>
-            <p class="infotext">Change the on-live alert message.<br><br>
-                You can use the following modifiers:<br>
-                &ltuser&gt inserts Twitch username<br>
-                &ltlink&gt inserts Twitch link<br>
-                &lttitle&gt inserts stream title<br>
-                &ltgame&gt inserts the game they're playing<br>
-                &ltrole&gt inserts the role chosen from /settings > Role Settings > Default alert role<br>
-                &ltbr&gt inserts newline<br><br>
-            </p>
+        <p class="infotext">Change the on-live alert message.<br><br>
+            You can use the following modifiers:<br>
+            &ltuser&gt inserts Twitch username<br>
+            &ltlink&gt inserts Twitch link<br>
+            &lttitle&gt inserts stream title<br>
+            &ltgame&gt inserts the game they're playing<br>
+            &ltrole&gt inserts the role chosen from /settings > Role Settings > Default alert role<br>
+            &ltbr&gt inserts newline<br><br>
+        </p>
         <p class="infotext">Note: Using this command is optional, as the bot has a default message</p>
         <p class="infotext" style="padding-left:40px">Examples:</p>
-            <p class="infotext"><i>/message "&ltuser&gt is live! &ltlink&gt &ltbr&gt Playing &ltgame&gt"</i><br><br> >
-                <span id="channel"></span>
-                sets alert message to:<br>
+        <p class="infotext"><i>/message "&ltuser&gt is live! &ltlink&gt &ltbr&gt Playing &ltgame&gt"</i><br><br> >
+            <span id="channel"></span>
+            sets alert message to:<br>
             Joe is live! https://twitch.tv/joe <br> Playing Minecraft</p>
         <h2 class="title">/channel</h2>
-            <p class="infotext">Choose where the bot will post alerts.<br>No arguments are used with this - instead you choose a channel from a menu after using the command.</p>
+        <p class="infotext">Choose where the bot will post alerts.<br>No arguments are used with this - instead you
+            choose a channel from a menu after using the command.</p>
         <h2 class="title">/role</h2>
-        <p class="infotext">Set the required role to send commands to Disco.<br>This command also uses no arguments, you'll choose a role from a menu.</p>
-        <p class="infotext">Default role is @everyone, meaning anyone can follow/unfollow users, change the post channel, etc.</p>
+        <p class="infotext">Set the required role to send commands to Disco.<br>This command also uses no arguments,
+            you'll choose a role from a menu.</p>
+        <p class="infotext">Default role is @everyone, meaning anyone can follow/unfollow users, change the post
+            channel, etc.</p>
         <h2 class="title">/settings</h2>
         <p class="infotext">Customize misc settings from a dropdown menu.<br><br>Notification Settings:<br></p>
         <p class="infotext" style="padding-left:40px">- Mute all -> Mutes all alerts, overriding all other options.<br>
-        - Twitch live alerts -> Sends messages when followed channels go live (enabled by default).<br>
-        - Edit alerts when offline -> Edits <i>(OFFLINE)</i> into on-live alerts when the channel goes offline (enabled by default).<br>
-        - Edit replay links into alerts -> Edits a stream replay into on-live alerts when channels go offline (if available).<br>
-        - Use Discord usernames in live alerts -> @mentions connected Discord users in their live alerts if they're connected to a Twitch channel through /settings > Twitch User Settings<br>
-        - Alert when stream titles change -> Sends an alert when a live stream changes its title.<br>
-        - Alert when channels go offline -> Sends alerts when live streams end.<br>
-        - Alert with replays when streams end -> Send alerts when live streams end with links to the stream replay.</p>
+            - Twitch live alerts -> Sends messages when followed channels go live (enabled by default).<br>
+            - Edit alerts when offline -> Edits <i>(OFFLINE)</i> into on-live alerts when the channel goes offline
+            (enabled by default).<br>
+            - Edit replay links into alerts -> Edits a stream replay into on-live alerts when channels go offline (if
+            available).<br>
+            - Use Discord usernames in live alerts -> @mentions connected Discord users in their live alerts if they're
+            connected to a Twitch channel through /settings > Twitch User Settings<br>
+            - Alert when stream titles change -> Sends an alert when a live stream changes its title.<br>
+            - Alert when channels go offline -> Sends alerts when live streams end.<br>
+            - Alert with replays when streams end -> Send alerts when live streams end with links to the stream replay.
+        </p>
         <p class="infotext">Role Settings:<br></p>
-        <p class="infotext" style="padding-left:40px">- Set required role for changing settings -> Only users with this chosen role will be able to edit Disco settings such as /channel, /message, /settings, etc. This is the same as using the /role command.<br>
-        - Set default alert role for &ltrole&gt -> Choose what role will be mentioned by default in alert messages in place of "&ltrole&gt". This can be overridden for specific Twitch users in /settings > Twitch User Settings</p>
+        <p class="infotext" style="padding-left:40px">- Set required role for changing settings -> Only users with this
+            chosen role will be able to edit Disco settings such as /channel, /message, /settings, etc. This is the same
+            as using the /role command.<br>
+            - Set default alert role for &ltrole&gt -> Choose what role will be mentioned by default in alert messages
+            in place of "&ltrole&gt". This can be overridden for specific Twitch users in /settings > Twitch User
+            Settings</p>
         <p class="infotext">Twitch User Settings:<br></p>
-        <p class="infotext" style="padding-left:40px">- Connect a Discord user -> Choose a Discord user to mention in live alerts for the chosen Twitch user instead of the Twitch username. This will also give the Discord user a "Streaming" Role whenever the chosen Twitch user is live. If there's issues with getting the role assignment to work, make sure to give Disco "Administrator" Privileges.<br>
-        - Disconnect a Discord user -> Removes any user chosen from the above option.<br>
-        - Choose a role to mention in alerts -> Overrides the default &ltrole&gt (chosen with /role > default alert role) for the chosen Twitch user.<br>
-        - Set a custom alert channel -> Overrides the alert channel (chosen with /channel) with a different one for the chosen Twitch user.</p>
+        <p class="infotext" style="padding-left:40px">- Connect a Discord user -> Choose a Discord user to mention in
+            live alerts for the chosen Twitch user instead of the Twitch username. This will also give the Discord user
+            a "Streaming" Role whenever the chosen Twitch user is live. If there's issues with getting the role
+            assignment to work, make sure to give Disco "Administrator" Privileges.<br>
+            - Disconnect a Discord user -> Removes any user chosen from the above option.<br>
+            - Choose a role to mention in alerts -> Overrides the default &ltrole&gt (chosen with /role > default alert
+            role) for the chosen Twitch user.<br>
+            - Set a custom alert channel -> Overrides the alert channel (chosen with /channel) with a different one for
+            the chosen Twitch user.</p>
         <h2 class="title">/connect <i>discorduserid, twitchname</i></h2>
-        <p class="infotext">Connect a Discord user to their Twitch account (same functionality as "Twitch User Settings")</p>
+        <p class="infotext">Connect a Discord user to their Twitch account (same functionality as "Twitch User
+            Settings")</p>
         <p class="infotext" style="padding-left:40px">Examples:</p>
-        <p class="infotext"><i>/connect 01001293821093 xqc</i><br>> The discord user with id "01001293821093" will now be mentioned instead of "xqc" in live alerts for twitch.tv/xqc</p>/
+        <p class="infotext"><i>/connect 01001293821093 xqc</i><br>> The discord user with id "01001293821093" will now
+            be mentioned instead of "xqc" in live alerts for twitch.tv/xqc</p>/
         <br>
-        <p class="infotext">The "connect" command will also add a new "Streaming" role which will be given to Discord users when their Twitch account is detected as live. If this role isn't being assigned correctly, please make sure your server's role hierarchy is as follows (Disco must have a role higher than the created "Streaming" role)</p>
+        <p class="infotext">The "connect" command will also add a new "Streaming" role which will be given to Discord
+            users when their Twitch account is detected as live. If this role isn't being assigned correctly, please
+            make sure your server's role hierarchy is as follows (Disco must have a role higher than the created
+            "Streaming" role)</p>
         <img src="roels.png" style="width: 500px" class="infotext">
         <h2 class="title">/nickname <i>name</i></h2>
         <p class="infotext">Change the nickname of the bot in your server.</p>
@@ -119,25 +148,27 @@
         <h2 class="title2" id="help">More Help</h2>
         <p class="infotext">This page briefly covers the usage of Disco commands.</p>
         <p class="infotext">If you need more help or have bugs/issues to report join the official Discord:</p>
-        <p class="infotext"><a href="https://discord.com/invite/atwCY9d"><button>Join</button></a></p>
-
-
+        <p class="infotext"><a href="https://discord.com/invite/atwCY9d">
+            <button>Join</button>
+        </a></p>
 
 
     </div>
     <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
 
-  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-  <script src="/__/firebase/7.24.0/firebase-app.js"></script>
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="/__/firebase/7.24.0/firebase-app.js"></script>
 
-  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-  <script src="/__/firebase/7.24.0/firebase-analytics.js"></script>
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="/__/firebase/7.24.0/firebase-analytics.js"></script>
 
-  <!-- Add Firebase products that you want to use -->
-  <script src="/__/firebase/7.24.0/firebase-auth.js"></script>
-  <script src="/__/firebase/7.24.0/firebase-firestore.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="/__/firebase/7.24.0/firebase-auth.js"></script>
+    <script src="/__/firebase/7.24.0/firebase-firestore.js"></script>
+</div>
 </body>
 <footer>
     <p style="color:white">Copyright &copy; 2023 Disco Twitch Alerts, All Rights Reserved, not affiliated or endorsed by Discord Inc or Twitch Interactive.</p>
+    <p style="color:white"><a style="color:white" href="privacy.html">Privacy Policy</a> - <a style="color:white" href="terms.html">Terms of Use</a></p>
 </footer>
 
